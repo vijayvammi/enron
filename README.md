@@ -2,7 +2,7 @@
 
 The expected file structure is:
 
-<enron_root_directory>
+enron_root_directory
 	-- edrm-enron-v1
 	-- edrm-enron-v2
 	-- lost+found
