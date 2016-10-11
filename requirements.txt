@@ -1,0 +1,8 @@
+email==4.0.2
+hazm==0.5.2
+libwapiti==0.2.1
+nltk==3.0.5
+py==1.4.31
+pytest==3.0.3
+six==1.10.0
+xmltodict==0.10.2
