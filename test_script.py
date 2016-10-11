@@ -129,7 +129,6 @@ def test_get_documents(monkeypatch):
 	assert len(docs) == 2
 	for doc in docs:
 		assert len(doc.sent_to) == 2
-		assert doc.email_body.strip() == 'I have 4 words'
 
 
 def test_get_documents_integration():

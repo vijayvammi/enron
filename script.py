@@ -15,16 +15,18 @@ EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL Tec
 class Document:
 	def __init__(self):
 		self.doc_id = ''
-		self.email_body = ''
 		self.sent_to = []
 		self.cc = []
-	'''
-	Assumption is a word is *word*
-	Basically, a word is surrounded by spaces, special characters (@,.,,)
-	or anything. 
-	'''
-	def get_email_body_count(self):
-		return len(re.sub('\W+',' ', self.email_body ).split(' '))
+		self.email_body_count = 0
+
+'''
+Assumption is a word is *word*
+Basically, a word is surrounded by spaces, special characters (@,.,,)
+or anything. 
+'''
+def get_email_body_count(body):
+	return len(re.sub('\W+',' ', body ).split(' '))
+
 
 '''
 Assuming every zipfile has only xml file which has the information required
@@ -128,7 +130,7 @@ def get_documents(zf, xmlfile):
 				file_path = safe_dict(ftype, ['ExternalFile','@FilePath'])
 				file_name = safe_dict(ftype, ['ExternalFile','@FileName'])
 				email_txt = get_email_txt(zf, file_path+'/'+file_name)
-				doc.email_body = get_email_body(email_txt)	
+				doc.email_body_count = get_email_body_count(get_email_body(email_txt))	
 		documents.append(doc)
 	return documents
 
@@ -164,7 +166,7 @@ def main(indir):
 			documents = get_documents(zf, xmlfile)
 			for doc in documents:
 				num_emails += 1
-				total_email_body_count += doc.get_email_body_count()
+				total_email_body_count += doc.email_body_count
 				update_scores(doc.sent_to, sent_to, 1)
 				update_scores(doc.cc, sent_to, 0.5)
 		except:
@@ -174,9 +176,7 @@ def main(indir):
 	if  num_emails and total_email_body_count:
 		avg_email_body = total_email_body_count/num_emails
 	print 'the average number of words with disclaimer ' + str(avg_email_body)
-	disc_doc = Document()
-	disc_doc.email_body = standard_disclaimer
-	disclaimer_count = disc_doc.get_email_body_count()
+	disclaimer_count = get_email_body_count(standard_disclaimer)
 	print 'the average number of works removing the disclaimer ' + str(avg_email_body - disclaimer_count)
 	sorted_sent_to = sorted(sent_to, key=sent_to.get, reverse=True)
 	for i, sent in enumerate(sorted_sent_to):
