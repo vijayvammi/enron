@@ -1,9 +1,14 @@
+from __future__ import division
 import zipfile
 import xmltodict
 import os, re
 from email.parser import Parser
 
 parser = Parser()
+
+standard_disclaimer = '''***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL Technologies, Inc. This Data Set is licensed under a Creative Commons Attribution 3.0 United States License <http://creativecommons.org/licenses/by/3.0/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http://www.zlti.com)."
+***********'''
 
 class Document:
 	def __init__(self):
@@ -17,7 +22,7 @@ class Document:
 	or anything. 
 	'''
 	def get_email_body_count(self):
-		return len(re.sub('\W+',' ', body ).split(' '))
+		return len(re.sub('\W+',' ', self.email_body ).split(' '))
 
 '''
 Assuming every zipfile has only xml file which has the information required
@@ -77,7 +82,7 @@ def parse_sent_to(sent_to):
 		if sent.find('@') == -1:
 			continue
 		sent = re.sub('[<>,]', '', sent)
-		collected.append(sent)
+		collected.append(sent.lower())
 	return collected
 
 '''
@@ -87,6 +92,8 @@ if the key does not exist, it sends a empty string out
 Avoids KeyError and exception handling
 '''
 def safe_dict(dicti, keys):
+	if not isinstance(dicti, dict):
+		return ''
 	if len(keys) == 1:
 		if keys[0] in dicti:
 			return dicti[keys[0]]
@@ -101,7 +108,7 @@ def safe_dict(dicti, keys):
 Returns a list of structure document objects for processing
 '''
 def get_documents(zf, xmlfile):
-	lines = zf.open(xmlfile)
+	lines = zf.open(xmlfile).read()
 	dict_of = xmltodict.parse(lines)
 	documents = []
 	for document in safe_dict(dict_of,['Root','Batch','Documents','Document']):
@@ -114,7 +121,7 @@ def get_documents(zf, xmlfile):
                         if safe_dict(tag, ['@TagName']) == '#CC':
                                 cc = safe_dict(tag, ['@TagValue'])
                                 doc.cc = parse_sent_to(cc)			
-		for ftype in safe_dict(doc,['Files','File']):
+		for ftype in safe_dict(document,['Files','File']):
 			if safe_dict(ftype, ['@FileType']) == 'Text':
 				file_path = safe_dict(ftype, ['ExternalFile','@FilePath'])
 				file_name = safe_dict(ftype, ['ExternalFile','@FileName'])
@@ -149,13 +156,25 @@ def main(indir):
 	for xmlzip in xml_zips:
 		zf = zipfile.ZipFile(indir + xmlzip)
 		xmlfile = get_xml_file(zf)
+		if not xmlfile:
+			continue
 		documents = get_documents(zf, xmlfile)
 		for doc in documents:
 			num_emails += 1
 			total_email_body_count += doc.get_email_body_count()
 			update_scores(doc.sent_to, sent_to, 1)
 			update_scores(doc.cc, sent_to, 0.5)
-
-
-
+	avg_email_body = 0
+	if  num_emails and total_email_body_count:
+		avg_email_body = total_email_body_count/num_emails
+	print 'the average number of words with disclaimer ' + str(avg_email_body)
+	disc_doc = Document()
+	disc_doc.email_body = standard_disclaimer
+	disclaimer_count = disc_doc.get_email_body_count()
+	print 'the average number of works removing the disclaimer ' + str(avg_email_body - disclaimer_count)
+	sorted_sent_to = sorted(sent_to, key=sent_to.get, reverse=True)
+	for i, sent in enumerate(sorted_sent_to):
+		if i >= 100:
+			break
+		print 'sent to ' + sent + ' count: ' + str(sent_to[sent])
 	

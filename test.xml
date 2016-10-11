@@ -16,8 +16,7 @@ atrice L Mims, Kevin Ruscitti,
 	 Stacey Neuweiler, Liz Bellamy, Jim Schwieger, Thomas A Martin, Greg McClendon,
 	 Elsa Villarreal, Daren J Farmer, Lauri A Allen, Edward D Gottlob, Gary W Lamphier,
 	 Danny Conner, John Arnold, Mike Maggi, Larry May"/>
-					<Tag TagName="#CC" TagDataType="Text" TagValue="Laura Harder, Kimberly Brown, Airam Arteaga"/
->
+					<Tag TagName="#CC" TagDataType="Text" TagValue="Laura Harder, Kimberly Brown, Airam Arteaga"/>
 					<Tag TagName="#Subject" TagDataType="Text" TagValue="Implementation of the Gas Message Board
 Application"/>
 					<Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2000-11-27T13:22:00.0+00:00"/>
@@ -27,12 +26,10 @@ Application"/>
 				</Tags>
 				<Files>
 					<File FileType="Native">
-						<ExternalFile FilePath="native_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4O
-TVA.eml" FileSize="3752" Hash="5662CC1AB90329E4A4FEE38093A2D0E4"/>
+						<ExternalFile FilePath="native_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4OTVA.eml" FileSize="3752" Hash="5662CC1AB90329E4A4FEE38093A2D0E4"/>
 					</File>
 					<File FileType="Text">
-						<ExternalFile FilePath="text_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4OTV
-A.txt" FileSize="3527" Hash="B5CEF49BBBE39FAA7BBB83D1C14204A8"/>
+						<ExternalFile FilePath="text_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4OTVA.txt" FileSize="3527" Hash="B5CEF49BBBE39FAA7BBB83D1C14204A8"/>
 					</File>
 				</Files>
 				<Locations>
@@ -57,12 +54,10 @@ ng@fmr.com, mark_galvin@notes.teradyne.com, david_castelli@notes.teradyne.com, m
 				</Tags>
 				<Files>
 					<File FileType="Native">
-						<ExternalFile FilePath="native_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJ
-GDB.eml" FileSize="1238" Hash="35B8B3862764B03EB0482491146F205F"/>
+						<ExternalFile FilePath="native_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJGDB.eml" FileSize="1238" Hash="35B8B3862764B03EB0482491146F205F"/>
 					</File>
 					<File FileType="Text">
-						<ExternalFile FilePath="text_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJGD
-B.txt" FileSize="1000" Hash="4DF183DF11DCF156D5544D6933D1A355"/>
+						<ExternalFile FilePath="text_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJGDB.txt" FileSize="1000" Hash="4DF183DF11DCF156D5544D6933D1A355"/>
 					</File>
 				</Files>
 				<Locations>
