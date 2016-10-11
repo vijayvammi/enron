@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Root MajorVersion="1" MinorVersion="0" CaseId="lewis-a_747_D52V" Description="CaseUtil">
+	<Batch name=" Batch 1">
+		<Documents>
+			<Document DocID="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4OTVA" DocType="Message" MimeType="message/rfc822">
+				<Tags>
+					<Tag TagName="#From" TagDataType="Text" TagValue="Ina Rangel"/>
+					<Tag TagName="#To" TagDataType="Text" TagValue="Tom Donohoe, Kelli Stevens, Jason Williams, P
+atrice L Mims, Kevin Ruscitti,
+	 Martin Cuilla, Geoff Storey, Hunter S Shively, Andrew H Lewis, Sylvia S Pollan,
+	 Sandra F Brawner, Peter F Keavey, Brad McKay, Robin Barbe, John Craig Taylor,
+	 Susan W Pereira, Andrea Ring, Scott Neal, Dick Jenkins, Scott Hendrickson,
+	 Dan Junek, Jared Kaiser, Tammi DePaolis, Judy Townsend, Chris Germany, Jay
+	 Reitmeyer, Kenneth Shulklapper, Matthew Lenhart, Steven P South, Jane M Tholt,
+	 Monique Sanchez, Keith Holst, Phillip K Allen, Mike Grigsby, Carey M Metz,
+	 Stacey Neuweiler, Liz Bellamy, Jim Schwieger, Thomas A Martin, Greg McClendon,
+	 Elsa Villarreal, Daren J Farmer, Lauri A Allen, Edward D Gottlob, Gary W Lamphier,
+	 Danny Conner, John Arnold, Mike Maggi, Larry May"/>
+					<Tag TagName="#CC" TagDataType="Text" TagValue="Laura Harder, Kimberly Brown, Airam Arteaga"/
+>
+					<Tag TagName="#Subject" TagDataType="Text" TagValue="Implementation of the Gas Message Board
+Application"/>
+					<Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2000-11-27T13:22:00.0+00:00"/>
+					<Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="false"/>
+					<Tag TagName="X-SDOC" TagDataType="Text" TagValue="1035062"/>
+					<Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-lewis-a-1590.eml"/>
+				</Tags>
+				<Files>
+					<File FileType="Native">
+						<ExternalFile FilePath="native_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4O
+TVA.eml" FileSize="3752" Hash="5662CC1AB90329E4A4FEE38093A2D0E4"/>
+					</File>
+					<File FileType="Text">
+						<ExternalFile FilePath="text_000" FileName="3.471249.NCGIEHAQRYHMFHYWBBDE2GBVJOLA4OTV
+A.txt" FileSize="3527" Hash="B5CEF49BBBE39FAA7BBB83D1C14204A8"/>
+					</File>
+				</Files>
+				<Locations>
+					<Location>
+						<Custodian>Andrew H Lewis&lt;andrew.h.lewis@enron.com&gt;</Custodian>
+						<LocationURI>lewis-a\All documents</LocationURI>
+					</Location>
+				</Locations>
+			</Document>
+			<Document DocID="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJGDB" DocType="Message" MimeType="message/rfc822">
+				<Tags>
+					<Tag TagName="#From" TagDataType="Text" TagValue="michael_yevak@notes.teradyne.com"/>
+					<Tag TagName="#To" TagDataType="Text" TagValue="RACEr91@aol.com"/>
+					<Tag TagName="#CC" TagDataType="Text" TagValue="vance.carter@ni.com, rick_schneider@notes.ter
+adyne.com, richard.dziura@superiorelectric.com, bprytko@sepracor.com, saealumni@WPI.EDU, rleone@xl.bm, alan.masse@stpaul.com, Gary.Wo
+ng@fmr.com, mark_galvin@notes.teradyne.com, david_castelli@notes.teradyne.com, michael_yevak@notes.teradyne.com"/>
+					<Tag TagName="#Subject" TagDataType="Text" TagValue="Re: Bove"/>
+					<Tag TagName="#DateSent" TagDataType="DateTime" TagValue="2000-11-19T20:54:00.0+00:00"/>
+					<Tag TagName="#HasAttachments" TagDataType="Boolean" TagValue="false"/>
+					<Tag TagName="X-SDOC" TagDataType="Text" TagValue="1035065"/>
+					<Tag TagName="X-ZLID" TagDataType="Text" TagValue="zl-edrm-enron-v2-lewis-a-1593.eml"/>
+				</Tags>
+				<Files>
+					<File FileType="Native">
+						<ExternalFile FilePath="native_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJ
+GDB.eml" FileSize="1238" Hash="35B8B3862764B03EB0482491146F205F"/>
+					</File>
+					<File FileType="Text">
+						<ExternalFile FilePath="text_000" FileName="3.471250.BUEOKBYALCOOGXSH4IUDJTDYY53IFJGD
+B.txt" FileSize="1000" Hash="4DF183DF11DCF156D5544D6933D1A355"/>
+					</File>
+				</Files>
+				<Locations>
+					<Location>
+						<Custodian>Andrew H Lewis&lt;andrew.h.lewis@enron.com&gt;</Custodian>
+						<LocationURI>lewis-a\All documents</LocationURI>
+					</Location>
+				</Locations>
+			</Document>
+	</Documents>
+	</Batch>
+</Root>
