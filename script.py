@@ -3,6 +3,8 @@ import zipfile
 import xmltodict
 import os, re
 from email.parser import Parser
+from tqdm import tqdm
+
 
 parser = Parser()
 
@@ -153,17 +155,21 @@ def main(indir):
 	total_email_body_count = 0
 	num_emails = 0
 	sent_to = {}
-	for xmlzip in xml_zips:
-		zf = zipfile.ZipFile(indir + xmlzip)
-		xmlfile = get_xml_file(zf)
-		if not xmlfile:
+	for xmlzip in tqdm(xml_zips):
+		try:
+			zf = zipfile.ZipFile(indir + xmlzip)
+			xmlfile = get_xml_file(zf)
+			if not xmlfile:
+				continue
+			documents = get_documents(zf, xmlfile)
+			for doc in documents:
+				num_emails += 1
+				total_email_body_count += doc.get_email_body_count()
+				update_scores(doc.sent_to, sent_to, 1)
+				update_scores(doc.cc, sent_to, 0.5)
+		except:
+			print xmlzip + ' has a problem'
 			continue
-		documents = get_documents(zf, xmlfile)
-		for doc in documents:
-			num_emails += 1
-			total_email_body_count += doc.get_email_body_count()
-			update_scores(doc.sent_to, sent_to, 1)
-			update_scores(doc.cc, sent_to, 0.5)
 	avg_email_body = 0
 	if  num_emails and total_email_body_count:
 		avg_email_body = total_email_body_count/num_emails
@@ -177,4 +183,14 @@ def main(indir):
 		if i >= 100:
 			break
 		print 'sent to ' + sent + ' count: ' + str(sent_to[sent])
-	
+
+
+if  __name__ == "__main__":
+	import sys
+	if len(sys.argv) < 2:
+		print 'Please give the enron edrm v2 folder location'
+	dirname = sys.argv[1]
+	if os.path.isdir(dirname):
+		main(dirname)
+	else:
+		print 'The given folder does not exist'
