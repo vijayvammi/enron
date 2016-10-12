@@ -173,6 +173,7 @@ def main(indir):
 				update_scores(doc.cc, sent_to, 0.5)
 		except:
 			print xmlzip + ' has a problem'
+			zf.close()
 			continue
 	avg_email_body = 0
 	if  num_emails and total_email_body_count:
