@@ -118,6 +118,8 @@ def get_documents(zf, xmlfile):
 	for document in safe_dict(dict_of,['Root','Batch','Documents','Document']):
 		doc = Document()
 		doc.doc_id = safe_dict(document,['@DocID'])
+		if len(doc.doc_id.split('.')) > 3:
+			continue
 		for tag in safe_dict(document, ['Tags','Tag']):
 			if safe_dict(tag, ['@TagName']) == '#To':
 				sent_to = safe_dict(tag, ['@TagValue'])
