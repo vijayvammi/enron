@@ -14,9 +14,11 @@ My program expects enron_root_directory/edrm-enron-v2 as input. It does not requ
 
 Set up:
 If you are using a virtualenv, activate virtual envioronment and install the required packages:
+
 	$ pip install -r requirements.txt
 
 Testing: The simplest way to test is $pytest -v (-s to see console output). 
+
 Running : python script.py /path/to/enron/edrm/v2
 
 Example output is provided in the repository. 
