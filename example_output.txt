@@ -1,0 +1,130 @@
+(enron) ubuntu@ip-172-31-36-185:~/enron_python/enron$ pytest -s
+==================================================================== test session starts =====================================================================
+platform linux2 -- Python 2.7.12, pytest-3.0.3, py-1.4.31, pluggy-0.4.0
+rootdir: /home/ubuntu/enron_python/enron, inifile:
+collected 14 items
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 415.65it/s]
+the average number of words with disclaimer 260.5
+the average number of works removing the disclaimer 204.5
+sent to racer91@aol.com count: 1
+sent to ng@fmr.com count: 0.5
+sent to mark_galvin@notes.teradyne.com count: 0.5
+sent to richard.dziura@superiorelectric.com count: 0.5
+sent to vance.carter@ni.com count: 0.5
+sent to rick_schneider@notes.ter count: 0.5
+sent to rleone@xl.bm count: 0.5
+sent to michael_yevak@notes.teradyne.com count: 0.5
+sent to saealumni@wpi.edu count: 0.5
+sent to bprytko@sepracor.com count: 0.5
+sent to alan.masse@stpaul.com count: 0.5
+sent to david_castelli@notes.teradyne.com count: 0.5
+.
+
+================================================================= 14 passed in 0.15 seconds ==================================================================
+(enron) ubuntu@ip-172-31-36-185:~/enron_python/enron$ python script.py /home/ubuntu/enron/edrm-enron-v2/
+ 29%|██████████████████████████████████▉                                                                                     | 44/151 [05:07<17:56, 10.06s/it]edrm-enron-v2_kaminski-v_xml.zip has a problem
+ 92%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▌         | 139/151 [15:44<02:24, 12.02s/it]edrm-enron-v2_kean-s_xml.zip has a problem
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 151/151 [16:49<00:00,  3.41s/it]
+the average number of words with disclaimer 321.514369818
+the average number of works removing the disclaimer 265.514369818
+sent to pete.davis@enron.com count: 13768.5
+sent to @ count: 5671.0
+sent to bill.williams.iii@enron.com count: 5573.0
+sent to mark.guzman@enron.com count: 5537.0
+sent to ryan.slinger@enron.com count: 4767.0
+sent to bert.meyers@enron.com count: 4706.5
+sent to geir.solberg@enron.com count: 4666.5
+sent to craig.dean@enron.com count: 4498.0
+sent to louise.kitchen@enron.com count: 3895.5
+sent to monika.causholli@enron.com count: 3106.0
+sent to leaf.harasin@enron.com count: 3034.5
+sent to dporter3@enron.com count: 2676.0
+sent to jbryson@enron.com count: 2667.0
+sent to eric.linder@enron.com count: 2651.0
+sent to worldwide@enron count: 2587.0
+sent to kimberly.watson@enron.com count: 2520.0
+sent to imceanotes-all+20enron+20worldwide+40enron@enron.com count: 2372.0
+sent to kevin.m.presto@enron.com count: 2302.5
+sent to james.d.steffes@enron.com count: 2275.5
+sent to benjamin.rogers@enron.com count: 2125.5
+sent to don.baughman@enron.com count: 2120.0
+sent to mike.grigsby@enron.com count: 2098.0
+sent to michelle.lokay@enron.com count: 2062.5
+sent to kam.keiser@enron.com count: 1923.0
+sent to tana.jones@enron.com count: 1915.0
+sent to gerald.nemec@enron.com count: 1909.5
+sent to phillip.k.allen@enron.com count: 1884.0
+sent to scott.neal@enron.com count: 1850.0
+sent to jason.wolfe@enron.com count: 1801.5
+sent to matthew.lenhart@enron.com count: 1753.0
+sent to daren.j.farmer@enron.com count: 1727.5
+sent to sara.shackleton@enron.com count: 1712.5
+sent to john.anderson@enron.com count: 1692.5
+sent to errol.mclaughlin@enron.com count: 1677.0
+sent to richard.shapiro@enron.com count: 1677.0
+sent to tim.belden@enron.com count: 1668.0
+sent to elizabeth.sager@enron.com count: 1652.5
+sent to mark.taylor@enron.com count: 1635.5
+sent to lynn.blair@enron.com count: 1627.0
+sent to chris.germany@enron.com count: 1606.5
+sent to jane.m.tholt@enron.com count: 1602.0
+sent to houston@enron count: 1601
+sent to darrell.schoolcraft@enron.com count: 1599.0
+sent to lindy.donoho@enron.com count: 1596.5
+sent to klay@enron.com count: 1560.5
+sent to hunter.s.shively@enron.com count: 1540.5
+sent to stacey.w.white@enron.com count: 1508.0
+sent to barry.tycholiz@enron.com count: 1505.0
+sent to steven.merris@enron.com count: 1504.5
+sent to lorraine.lindberg@enron.com count: 1496.0
+sent to kenneth.lay@enron.com count: 1473.5
+sent to mark.dana.davis@enron.com count: 1471.0
+sent to matt.smith@enron.com count: 1453.0
+sent to jeff.dasovich@enron.com count: 1449.5
+sent to steven.harris@enron.com count: 1445.0
+sent to paul.d.thomas@enron.com count: 1443.0
+sent to fletcher.j.sturm@enron.com count: 1434.0
+sent to shelley.corman@enron.com count: 1418.5
+sent to jdasovic@enron.com count: 1417.0
+sent to joe.stepenovitch@enron.com count: 1411.0
+sent to mday@gmssr.com count: 1400.0
+sent to john.griffith@enron.com count: 1396.5
+sent to tk.lohman@enron.com count: 1393.0
+sent to phillip.m.love@enron.com count: 1379.5
+sent to imceanotes-all+20enron+20houston+40enron@enron.com count: 1379
+sent to frank.ermis@enron.com count: 1373.5
+sent to thomas.a.martin@enron.com count: 1365.5
+sent to jonathan.mckay@enron.com count: 1333.5
+sent to mike.maggi@enron.com count: 1332.5
+sent to doug.gilbert-smith@enron.com count: 1328.0
+sent to earl.tisdale@enron.com count: 1321.5
+sent to andy.zipper@enron.com count: 1317.5
+sent to keith.holst@enron.com count: 1310.0
+sent to john.arnold@enron.com count: 1304.5
+sent to jay.reitmeyer@enron.com count: 1300.0
+sent to kim.ward@enron.com count: 1297.5
+sent to paul.y'barbo@enron.com count: 1286.5
+sent to jason.bass2@compaq.com count: 1285.5
+sent to michael.mier@enron.com count: 1276.5
+sent to cstone1@txu.com count: 1257.5
+sent to ggreen2@txu.com count: 1239.5
+sent to joe.parks@enron.com count: 1208.5
+sent to mike.carson@enron.com count: 1205.5
+sent to richard.b.sanders@enron.com count: 1205.0
+sent to kay.mann@enron.com count: 1197.5
+sent to tori.kuykendall@enron.com count: 1196.0
+sent to harry.arora@enron.com count: 1193.5
+sent to clint.dean@enron.com count: 1174.5
+sent to gary.a.hanks@enron.com count: 1172.5
+sent to marie.heard@enron.com count: 1137.5
+sent to eric.bass@enron.com count: 1135.5
+sent to steven.p.south@enron.com count: 1130.0
+sent to randall.l.gay@enron.com count: 1128.0
+sent to dutch.quigley@enron.com count: 1125.5
+sent to lcampbel@enron.com count: 1120.5
+sent to robert.benson@enron.com count: 1118.5
+sent to jeffrey.a.shankman@enron.com count: 1114.5
+sent to holden.salisbury@enron.com count: 1112.0
+sent to susan.m.scott@enron.com count: 1108.5
+sent to greg.whalley@enron.com count: 1101.5
